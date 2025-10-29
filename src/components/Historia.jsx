@@ -1,4 +1,4 @@
-
+import extincionPangea from '../assets/videos/extincionPangea.mp4';
 import { Link } from 'react-router-dom';
 import './Historia.css';
 
@@ -36,7 +36,7 @@ export default function Historia() {
                     autoPlay
                     muted
                     loop>
-                    <source src='/videos/extincion-pangea.mp4'
+                    <source src={extincionPangea}
                         type='video/mp4' />El navegador no pudo cargar el video o me lo tumbaron por copyRight ekide
                 </video>
                 <Link to="/detalle" rel='noopener noreferrer'>

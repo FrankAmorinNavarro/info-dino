@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Detalle.css';
-
+import videoTriasico from '../assets/videos/videoTriasico.mp4';
 import especies1 from '../assets/especies1.webp';
 import especies2 from '../assets/especies2.webp';
 import especies3 from '../assets/especies3.webp';
@@ -68,7 +68,7 @@ export default function Detalle() {
                             autoPlay
                             controls
                             muted
-                            loop> <source  src='/videos/video-Triasico.mp4' type='video/mp4'/>
+                            loop> <source  src={videoTriasico} type='video/mp4'/>
                             El navegador no pudo cargar el video o me lo tumbaron por copyRight ekide</video>
             </section>
         </>
