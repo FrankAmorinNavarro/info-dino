@@ -1,0 +1,204 @@
+
+
+
+.seccion-especies {
+  background: #242724;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.title-especies {
+  font-size: 42px;
+  font-weight: 700;
+  color: rgb(241, 158, 2);
+  margin-bottom: 4rem;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 2px 2px 3px #000;
+}
+@media(max-width:767px) and (min-width:320px){
+  .title-especies{
+    font-size: 40px;
+  }
+}
+
+.titulo-info{
+  margin-top: 4rem;
+  position: relative;
+  background: linear-gradient(165deg, rgb(255, 85, 63), rgb(255, 238, 0),rgb(255, 238, 0) );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 37px;
+  font-weight: 700;
+  text-shadow: 2px 2px 3px #00000028;
+}
+
+
+.text-intro{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  text-shadow: 2px 2px 3px #000;
+}
+
+@media(max-width:767px) and (min-width:320px){
+
+  .titulo-info{
+    margin: 0;
+    text-align: center;
+  }
+  .text-intro{
+    text-align: center;
+    font-size: 16.5px;
+    
+  }
+}
+
+@media(max-width:1280px) and (min-width:768px){
+
+  .titulo-info{
+    margin: 0;
+    text-align: center;
+  }
+}
+
+
+/* === ESTILOS PARA EL BOTON
+.btn-especies{
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 19px;
+    color: white;
+    background-color: rgba(5, 107, 5, 0.747);
+    border: none;
+    box-shadow: 2px 2px 3px #000000;
+    border-radius: 10px;
+    height: 45px;
+    width: 135px;
+    transition: color 0.3s ease;
+}
+.btn-especies::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 166, 0);
+    transition: left 0.8s ease;
+    z-index: 0;
+}
+
+.btn-especies:hover::before{
+    left: 0;
+}
+.espe{
+    position: relative;
+    z-index: 1;
+}*/
+
+@media(max-width: 767px) and (min-width: 320px) {
+  .contenedor-btn{
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-especies{
+    height: 40px;
+    width: 120px;
+    font-size: 17px;
+  }
+
+ 
+}
+
+.img-especies {
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.galeria {
+  display: flex;
+  width: 600px;
+  height: 430px;
+}
+
+
+/* Estilos para el Contenedor y Texto */
+.imagen-con-texto {
+  position: relative;
+  flex-grow: 1;
+  width: 0px;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+
+.galeria img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  border-radius: 20px;
+  transform: 0.5s ease;
+}
+
+.texto-superpuesto {
+  position: absolute; 
+  bottom: 15px; 
+  left: 15px;  
+  z-index: 10; 
+  color: rgba(255, 166, 0, 0.712); 
+  font-size: 1.5rem; 
+  font-weight: bold;
+  text-shadow: 2px 2px 3px #000;
+  margin: 0; 
+  opacity: 0; 
+  transition: opacity 0.5s ease;
+}
+
+
+.imagen-con-texto:hover {
+  cursor: pointer;
+  width: 310px; 
+ 
+}
+
+.imagen-con-texto:hover img {
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+.imagen-con-texto:hover .texto-superpuesto {
+  opacity: 1;
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+
+  .img-especies {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .galeria {
+    display: flex;
+    width: 315px;
+    height: 225px;
+  }
+
+  .imagen-con-texto:hover {
+    cursor: pointer;
+    width: 190px;
+  }
+}
+
+@media(max-width: 991px) and (min-width: 768px) {
+
+  .imagen-con-texto:hover {
+    cursor: pointer;
+    width: 195px;
+  }
+}

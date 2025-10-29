@@ -1,0 +1,168 @@
+
+/* === SECCION PRINCIPAL DE TODO EL HOME*/
+.section-home {
+    padding-top: 13rem;
+    background-image:linear-gradient(to top, #242724 5%, rgba(26, 26, 26, 0) 7.5%),
+        linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('../assets/dinos.webp');
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    background-position: center;
+     
+}
+
+.section-home::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    pointer-events: none;
+    background: linear-gradient(to top, #242724, transparent);
+}
+
+@media(max-width:767px) and (min-width: 320px){
+    .section-home{
+        padding-top: 11rem;
+        padding-bottom: 4rem;
+    }
+}
+
+
+
+.sub-title{
+    text-shadow: 2px 1px 2px #000;
+    text-align: center;
+    color: rgb(241, 158, 2);
+    font-weight: 700;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+/* === ESTILOS PARA EL TITULO */
+.title {
+    text-shadow: 2px 2px 3px #000;
+    text-align: center;
+    font-weight: 900;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 75px;
+}
+
+@media (max-width: 767px ) and (min-width: 320px){
+    .title{
+        font-size: 42px;
+    }
+}
+
+/* === ANIMACIONES PARA EL PARPADEO DE LAS LETRAS*/
+.letter {
+    display: inline-block;
+    animation: flicker 5.8s infinite;
+}
+@keyframes flicker{
+    0%, 19%, 21%, 23%, 27%, 54%, 56%, 100% {      
+        color: rgb(221, 221, 221); 
+    }
+    20%, 24%, 55% {
+        color:  rgb(241, 158, 2);
+    }
+}
+.letter:nth-child(odd) { animation-delay: 0.7s; }
+.letter:nth-child(3n) { animation-delay: 0.1s; }
+.letter:nth-child(5n) { animation-delay: 0.2s; }
+
+@keyframes flot{
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+
+/*=== CONTENEDOR PADRE QUE ENVUELVE TEXTO E IMAGEN*/
+.home-text{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 767px ) and (min-width: 320px){
+    .home-text{
+        align-items: center;
+    }
+
+}
+
+
+/*=== ESTILOS PARA EL TEXTO*/
+.text {   
+    margin-top: 4rem;
+    font-size: 21px; 
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+
+}
+
+@media (max-width: 767px ) and (min-width: 320px){
+    .text{
+      
+        margin-top: 2rem;
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .sub-title{
+        font-size: 20px;
+    }
+
+}
+@media(max-width: 991px) and (min-width: 768px){
+     .text {
+        font-size: 20px;
+        padding-bottom: 5rem;
+    }
+    .sub-title{
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+
+
+
+/* === ESTILOS PARA LA IMAGEN DEL PLANETA*/
+.img-fluid {
+
+   clip-path: circle(56% at 50% 50%);
+    margin-top: 1.5rem;
+    mask-image: radial-gradient(ellipse, black 40%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse, black 40%, transparent 68%);
+    animation: flot 3s ease-in-out infinite;
+    width: 100%;
+    max-width: 900px; 
+    height: auto;
+}
+
+@media(max-width: 991px) and (min-width: 768px){
+
+    .row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+   
+    .img-fluid {
+    float: lerft; 
+    shape-outside: circle(50%);
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    
+  }
+
+}
+
+
+
+
+
